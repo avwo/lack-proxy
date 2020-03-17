@@ -1,0 +1,37 @@
+{
+  "name": "lack-proxy",
+  "version": "0.1.0",
+  "description": "抽离 lack 的设置 http 代理功能，减少引用的包大小",
+  "author": "avenwu <avwu@qq.com>",
+  "main": "./lib",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib test",
+    "lintfix": "eslint --fix lib test",
+    "init": "node bin init",
+    "watch": "node bin watch"
+  },
+  "homepage": "https://github.com/avwo/lack",
+  "keywords": [
+    "whistle",
+    "plugin",
+    "http-proxy"
+  ],
+  "registry": "https://github.com/avwo/lack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avwo/lack.git"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "hagent": "^0.6.1",
+    "lru-cache": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-imweb": "^0.2.17"
+  }
+}

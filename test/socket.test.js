@@ -1,5 +1,5 @@
 const net = require('net');
-const { setProxy, enableProxy } = require('../lib');
+const { setProxy, enableProxy } = require('../');
 
 const PROXY_OPTIONS = {
   host: '127.0.0.1',

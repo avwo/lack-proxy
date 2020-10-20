@@ -3,7 +3,6 @@
   "version": "0.2.1",
   "description": "抽离 lack 的设置 http 代理功能，减少引用的包大小",
   "author": "avenwu <avwu@qq.com>",
-  "main": "./lib",
   "license": "MIT",
   "scripts": {
     "lint": "eslint lib test",

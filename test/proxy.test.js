@@ -27,7 +27,6 @@ req.setEncoding('utf8');
 let data = '';
 req.on('data', (chunk) => { data += chunk; });
 req.on('end', () => {
-  console.log(`\n${data}`); // eslint-disable-line
   client.close();
 });
 req.end();

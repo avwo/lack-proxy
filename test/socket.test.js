@@ -1,5 +1,5 @@
 const net = require('net');
-const { setProxy, enableProxy } = require('../');
+const { setProxy } = require('../');
 
 const PROXY_OPTIONS = {
   host: '127.0.0.1',
@@ -15,10 +15,10 @@ setProxy((options) => {
 // setProxy(PROXY_OPTIONS);
 
 (async () => {
-  const socket = net.connect(enableProxy({
+  const socket = net.connect({
     host: 'ke.qq.com',
     port: 80,
-  }));
+  });
   socket.write([
     'GET / HTTP/1.1',
     'Host: ke.qq.com',

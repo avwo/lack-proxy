@@ -1,6 +1,6 @@
 {
   "name": "lack-proxy",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "抽离 lack 的设置 http 代理功能，减少引用的包大小",
   "author": "avenwu <avwu@qq.com>",
   "license": "MIT",

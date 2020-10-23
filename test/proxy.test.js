@@ -40,7 +40,7 @@ httpClient.on('error', console.error); // eslint-disable-line
 httpClient.end();
 
 const httpsClient = https.request('https://ke.qq.com', (res) => {
-  // console.log(res.statusCode); // eslint-disable-line
+  console.log(res.statusCode); // eslint-disable-line
 });
 httpsClient.on('error', console.error); // eslint-disable-line
 httpsClient.end();

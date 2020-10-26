@@ -24,8 +24,6 @@ req.on('response', (headers) => {
 });
 
 req.setEncoding('utf8');
-let data = '';
-req.on('data', (chunk) => { data += chunk; });
 req.on('end', () => {
   client.close();
 });

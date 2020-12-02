@@ -4,10 +4,6 @@ const { setProxy } = require('../');
 const PROXY_OPTIONS = {
   host: '127.0.0.1',
   port: 8899,
-  socket: {
-    host: '127.0.0.1',
-    port: 8888,
-  },
 };
 
 // 动态设置代理

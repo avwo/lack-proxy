@@ -1,11 +1,11 @@
 const net = require('net');
-const { setProxy, attachData } = require('../');
+const { setProxy, attachData, attachHeaders } = require('../');
 
 const PROXY_OPTIONS = {
   host: '127.0.0.1',
   port: 8899,
   filterRequest: (options) => {
-    console.log(options);
+    console.log(options.attachData, options.attachHeaders);
     return true;
   },
 };
@@ -20,7 +20,7 @@ setProxy((options) => {
 
 (async () => {
   const socket = net.connect({
-    host: attachData('ke.qq.com', { a: 123 }),
+    host: attachData(attachHeaders(attachData('ke.qq.com', { a: 123 }, { test: 234 }), { abbbbbb: 99999 }), { rrrr: 123 }),
     port: 80,
   });
   socket.write([

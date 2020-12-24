@@ -1,9 +1,13 @@
 const net = require('net');
-const { setProxy } = require('../');
+const { setProxy, attachData } = require('../');
 
 const PROXY_OPTIONS = {
   host: '127.0.0.1',
   port: 8899,
+  filterRequest: (options) => {
+    console.log(options);
+    return true;
+  },
 };
 
 // 动态设置代理
@@ -16,7 +20,7 @@ setProxy((options) => {
 
 (async () => {
   const socket = net.connect({
-    host: 'ke.qq.com',
+    host: attachData('ke.qq.com', { a: 123 }),
     port: 80,
   });
   socket.write([

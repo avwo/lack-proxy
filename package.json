@@ -1,6 +1,6 @@
 {
   "name": "lack-proxy",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "动态设置进程全局 HTTP 代理",
   "author": "avenwu <avwu@qq.com>",
   "license": "MIT",

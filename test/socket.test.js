@@ -1,11 +1,11 @@
 const net = require('net');
-const { setProxy, attachData, attachHeaders } = require('../');
+const { setProxy, socket: { setHeaders, setUrl } } = require('../');
 
 const PROXY_OPTIONS = {
   host: '127.0.0.1',
   port: 8899,
   filterRequest: (options) => {
-    console.log(options.attachData, options.attachHeaders); // eslint-disable-line
+    console.log(options.headers, options.url); // eslint-disable-line
     return true;
   },
 };
@@ -20,7 +20,7 @@ setProxy((options) => {
 
 (async () => {
   const socket = net.connect({
-    host: attachData(attachHeaders(attachData('ke.qq.com', { a: 123 }, { test: 234 }), { abbbbbb: 99999 }), { rrrr: 123 }),
+    host: setHeaders(setHeaders(setUrl('ke.qq.com', 'a.b.com:8080'), { abbbbbb: 99999 }), { rrrr: 123 }),
     port: 80,
   });
   socket.write([

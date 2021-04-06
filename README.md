@@ -44,5 +44,4 @@ const lack = require('lack-proxy');
         };
     });
     ```
-3. 
-有关例子可以参见[测试用例](./test)。
+3. 有关例子可以参见[测试用例](./test)。

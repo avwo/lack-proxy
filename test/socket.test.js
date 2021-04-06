@@ -5,7 +5,7 @@ const PROXY_OPTIONS = {
   host: '127.0.0.1',
   port: 8899,
   filterRequest: (options) => {
-    console.log(options.attachData, options.attachHeaders);
+    console.log(options.attachData, options.attachHeaders); // eslint-disable-line
     return true;
   },
 };

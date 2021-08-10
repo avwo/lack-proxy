@@ -5,7 +5,7 @@
 [![NPM count](https://img.shields.io/npm/dt/lack-proxy.svg?style=flat-square)](https://www.npmjs.com/package/lack-proxy)
 [![License](https://img.shields.io/npm/l/lack-proxy.svg?style=flat-square)](https://www.npmjs.com/package/lack-proxy)
 
-lack-proxy 可以给程序动态设置全局HTTP代理或根据请求参数设置（建议在程序入口设置）。
+lack-proxy 用于给 Node 程序设置全局 HTTP 代理，可以将 Node 进程里面的指定 TCP 请求代理到 Whistle 等抓包调试代理。
 
 ### 安装
 ``` sh
@@ -13,6 +13,8 @@ npm i -g lack-proxy
 ```
 
 ### 使用
+> 建议在程序入口设置
+
 ``` js
 const lack = require('lack-proxy');
 ```

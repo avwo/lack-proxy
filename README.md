@@ -9,7 +9,7 @@ lack-proxy 用于给 Node 程序设置全局 HTTP 代理，可以将 Node 进程
 
 ### 安装
 ``` sh
-npm i -g lack-proxy
+npm i --save-dev lack-proxy
 ```
 
 ### 使用

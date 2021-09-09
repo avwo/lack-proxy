@@ -23,6 +23,8 @@ const lack = require('lack-proxy');
     lack.proxy({
         host: '127.0.0.1',
         port: '8899',
+        // allowlist: ['ke.qq.com', '*.ke.qq.com'],
+        // blocklist: ['fudao.qq.com', '*.fudao.qq.com'],
         // filterRequest: (options, isSocket) => {
         //    return true || false;
         // }, // 可选，精确过滤请求
@@ -39,6 +41,8 @@ const lack = require('lack-proxy');
             host: '127.0.0.1',
             port: '8899',
             headers: options.headers,
+            // allowlist: ['ke.qq.com', '*.ke.qq.com'],
+            // blocklist: ['fudao.qq.com', '*.fudao.qq.com'],
             // filterRequest: (options, isSocket) => {
             //    return true || false;
             // }, // 可选，精确过滤请求

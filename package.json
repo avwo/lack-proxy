@@ -1,6 +1,6 @@
 {
   "name": "lack-proxy",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "动态设置进程全局 HTTP 代理",
   "author": "avenwu <avwu@qq.com>",
   "license": "MIT",
@@ -10,16 +10,16 @@
     "init": "node bin init",
     "watch": "node bin watch"
   },
-  "homepage": "https://github.com/avwo/lack",
+  "homepage": "https://github.com/avwo/lack-proxy",
   "keywords": [
     "whistle",
     "plugin",
     "http-proxy"
   ],
-  "registry": "https://github.com/avwo/lack",
+  "registry": "https://github.com/avwo/lack-proxy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avwo/lack.git"
+    "url": "https://github.com/avwo/lack-proxy.git"
   },
   "engines": {
     "node": ">= 8"

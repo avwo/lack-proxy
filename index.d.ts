@@ -15,9 +15,11 @@ type ProxyOptions = {
   },
 };
 
+type SetProxy = (options: Options) => Result;
+
 export type ProxyFilter = (options?: object, isHttps?: boolean) => ProxyOptions | undefined | null | void;
 
-export type Result = ProxyOptions | undefined | null | void | ProxyFilter;
+export type Result = ProxyFilter | ProxyOptions | undefined | null | void;
 
 export type Options = ProxyOptions | ProxyFilter;
 
@@ -26,15 +28,15 @@ export type ReqOpts = string | {
   [propName: string]: any,
 };
 
-export interface socket {
+export const socket: {
   setUrl: (opts: ReqOpts, url: string) => ReqOpts,
   getHeaders: () => Object,
   setHeaders: (opts: ReqOpts, headers: object) => ReqOpts,
   removeHeaders: (opts: ReqOpts) => void,
-};
+}
 
-export type getProxy = (opts?: object, isHttps?: boolean) => Result;
-export type setProxy = (options: Options) => Result;
-export type proxy = setProxy;
-export type removeProxy = () => void;
-export type hasProxy = () => Result;
+export const getProxy: (opts?: object, isHttps?: boolean) => Result;
+export const setProxy: (options: Options) => Result;
+export const proxy: SetProxy;
+export const removeProxy: () => void;
+export const hasProxy: () => Result;

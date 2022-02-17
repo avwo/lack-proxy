@@ -1,11 +1,13 @@
 /// <reference types="node" />
 
+export type FilterRequest = (opts?: object, isSocket?: boolean) => boolean;
 
 type ProxyOptions = {
   host: string,
   port: number,
   headers?: object,
-  filterRequest?: (opts?: object, isHttps?: boolean) => boolean,
+  servername?: string,
+  filterRequest?: FilterRequest,
   allowlist?: string | string[],
   blocklist?: string | string[],
   socket?: false | {
@@ -17,7 +19,7 @@ type ProxyOptions = {
 
 type SetProxy = (options: Options) => Result;
 
-export type ProxyFilter = (options?: object, isHttps?: boolean) => ProxyOptions | undefined | null | void;
+export type ProxyFilter = (options: object, isHttps?: boolean) => ProxyOptions | undefined | null | void;
 
 export type Result = ProxyFilter | ProxyOptions | undefined | null | void;
 
@@ -33,10 +35,10 @@ export const socket: {
   getHeaders: () => Object,
   setHeaders: (opts: ReqOpts, headers: object) => ReqOpts,
   removeHeaders: (opts: ReqOpts) => void,
-}
+};
 
 export const getProxy: (opts?: object, isHttps?: boolean) => Result;
-export const setProxy: (options: Options) => Result;
+export const setProxy: SetProxy;
 export const proxy: SetProxy;
 export const removeProxy: () => void;
 export const hasProxy: () => Result;

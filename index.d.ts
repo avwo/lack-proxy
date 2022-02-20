@@ -15,7 +15,7 @@ interface ProxyOptions {
     port: number;
     headers?: object;
   };
-};
+}
 
 type SetProxy = (options: Options) => Result;
 
@@ -32,7 +32,7 @@ export type ReqOpts = string | {
 
 export const socket: {
   setUrl(opts: ReqOpts, url: string): ReqOpts;
-  getHeaders(): Object;
+  getHeaders(): any;
   setHeaders(opts: ReqOpts, headers: object): ReqOpts;
   removeHeaders(opts: ReqOpts): void;
 };

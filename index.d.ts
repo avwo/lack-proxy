@@ -19,9 +19,9 @@ type ProxyOptions = {
 
 type SetProxy = (options: Options) => Result;
 
-export type ProxyFilter = (options: object, isHttps?: boolean) => ProxyOptions | undefined | null | void;
+export type ProxyFilter = (options: object, isHttps?: boolean) => ProxyOptions;
 
-export type Result = ProxyFilter | ProxyOptions | undefined | null | void;
+export type Result = ProxyFilter | ProxyOptions;
 
 export type Options = ProxyOptions | ProxyFilter;
 
